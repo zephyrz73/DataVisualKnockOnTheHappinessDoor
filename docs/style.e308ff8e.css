@@ -1,0 +1,408 @@
+* { padding: 0; margin: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+      opacity: 1;
+      transition: 1s opacity;
+}
+
+h1 {
+  font-size: 15vh;
+  line-height: 95%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h4 {
+  color: rgb(54, 54, 54);
+}
+
+img {
+  object-fit: contain;
+}
+
+#title {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: row; */
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #fadbdb;
+  background-image: url("/bgimg.2cb2f97d.png");
+  background-size: 100% 100%;
+  color: rgb(48, 47, 47);
+}
+
+#part1 #world_map {
+  width: 100%;
+}
+
+#map_trans {
+  padding-right: 0px;
+  padding-top: 20px;
+}
+
+#title, #map_section{
+  padding-right: 0px;
+}
+
+
+
+#title div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  margin-right: 5vh;
+  margin-left: 10vh;
+}
+
+#part1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#part1 #world_map {
+  width: 100vh;
+  height: 100vh;
+  margin: 50px;
+}
+
+#title div {
+  background-color: rgb();
+}
+
+#titleBack p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#titleBack h4{
+  text-align: center;
+}
+
+h5 {
+  margin-left: 20px;
+  font-weight: lighter;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding-right: 32vh;
+}
+
+#sticky_record {
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  width: 32vh;
+  padding: 20px;
+  padding-right: 20px;
+  background-color: #fadbdb;
+}
+
+#country_form {
+  display: flex;
+  flex-direction: row;
+}
+#country p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: white;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.trans {
+  text-align: left;
+  padding-right: 50vh;
+  margin: 20px;
+  font-weight: lighter;
+  font-size: 4vh;
+}
+
+input[type=text] {
+  background-color: white;
+  width: 85%;
+  height: 14px;
+}
+
+.factor_title  {
+  color: black;
+}
+
+.add_delete_btn {
+  background-color: black;
+  color: #fff;
+  border-color: black;
+  width: 40px;
+  height: 35px;
+  font-size: 12px;
+}
+
+.add_delete_btn:disabled {
+  color: rgb(209, 209, 209);
+  opacity: 0.2;
+}
+
+.delete_btn {
+  width: 20px;
+  height: 20px;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: black !important;
+  color: #ffffff;
+}
+
+
+/* table country year graph */
+table, td, th {
+  border: 0.5px solid;
+  font-size: 1.5vh;
+  width: 32vh;
+  color: black;
+}
+
+tr {
+  height: 3vh;
+}
+
+#table-side .table-intro {
+  font-size: 13px;
+}
+
+
+
+/* td, th {
+  fill:#883658;
+} */
+table {
+  border-collapse: collapse;
+}
+
+#years_chart .myXaxis path{
+  stroke:rgb(255, 255, 255);
+}
+
+#years_chart .myXaxis text{
+ fill:rgb(83, 69, 69);
+}
+#years_chart .myXaxis line{
+  stroke:rgb(255, 255, 255);
+}
+
+#years_chart .myYaxis line{
+  stroke:rgb(255, 255, 255);
+}
+#years_chart .myYaxis path{
+  stroke: rgb(255, 255, 255);
+}
+#years_chart .myYaxis text{
+  fill: rgb(83, 69, 69);
+}
+
+#world_map {
+  width: 90vh;
+}
+
+
+select {
+  height: 40px;
+  margin-left: 10px;
+  width: 95%;
+  background-color: white;
+  border-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.show_select_field {
+  height: 25vh;
+}
+#show_country h4 {
+  font-size: 12px;
+}
+#show_country p {
+  font-size: 12px;
+}
+.selected_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.selected_list div {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected_list p {
+  margin-right: 10px;
+}
+
+#selected_country_list p {
+  margin-bottom: 0px;
+}
+
+
+/**
+  Begin Spider Chart Section
+*/
+#spider_chart_section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+
+
+
+ .footer {
+  border-top: 1px solid #ccc;
+  margin-top: 30px;
+  padding-top: 4px;
+  text-align: left;
+  font-size: 12px;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 56px;
+  text-align: center;
+
+  color: rgb(119, 0, 20);
+}
+
+#headerMap p {
+  font-weight: lighter;
+  font-size: 13px;
+  text-align: center;
+  color: rgb(119, 0, 20);
+}
+
+#headerMap {
+  margin-bottom: 70px;
+  margin-top: 1px;
+  margin-left: 30px;
+}
+.footer a {
+  color: #21346B;
+}
+.footer a:hover {
+  color: #ce3333;
+}
+
+#spider_chart_section {
+  display: flex;
+  flex-direction: row;
+}
+#spider_chart_section #factor_graph {
+  margin-top: 120px;
+}
+
+#years_text > p {
+  width: 30vh;
+}
+
+#years_visuals {
+  display: flex;
+  flex-direction: row;
+}
+#years_text {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+#years_chart {
+  margin-top: 30px;
+}
+.ml9 {
+  position: relative;
+  font-weight: 200;
+  font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+#years_text h2 {
+  margin-bottom: 40px;
+  font-weight: lighter;
+  font-size: 24px;
+  text-align: left;
+  color: rgb(83, 69, 69);
+}
+#years_text p {
+  margin-bottom: 40px;
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: left;
+  color: rgb(61, 61, 61);
+}
+
+.headerLineChart h4{
+  color: #885f7c;
+  font-weight: lighter;
+  font-size: 30px;
+  text-align: center;
+}
+/*
+.bgimg {
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: "../static/happy.png";} */
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

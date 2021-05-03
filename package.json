@@ -1,0 +1,33 @@
+{
+  "name": "fp-knock-on-the-happiness-door",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Team members:   * Meishan Dong   * Zephyr Zhou   * Joely Swartz   * Christina Zhang   * Yueqian Zhang",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --no-minify --public-url https://cse442-20f.github.io/FP-Knock-On-The-Happiness-Door/; rm -rf docs; mv dist docs;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse442-20f/FP-Knock-On-The-Happiness-Door.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse442-20f/FP-Knock-On-The-Happiness-Door/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.3.1"
+  },
+  "dependencies": {
+    "d3": "^5.16.0",
+    "fuzzysort": "^1.1.4",
+    "statics": "^0.1.0"
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>CSE442FP: Knock On the Happiness Door</title>
+        <link rel="stylesheet" href="https://cse442-20f.github.io/FP-Knock-On-The-Happiness-Door/style.21216a2d.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <script type="text/javascript" src="https://cse442-20f.github.io/FP-Knock-On-The-Happiness-Door/src.2be77368.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script type="text/javascript" src="https://cse442-20f.github.io/FP-Knock-On-The-Happiness-Door/exampleFactorSpider.c27d5f71.js"></script>
+        <script type="text/javascript" src="https://cse442-20f.github.io/FP-Knock-On-The-Happiness-Door/factorGraph.3a2dcfae.js"></script>
+        <!-- <script type="text/javascript" src="animation.js"></script> -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <section id="title">
+            <div>
+                <h1 class="ml9">
+                    <span class="text-wrapper">
+                      <span class="letters">Knock on the Happiness Door</span>
+                    </span>
+                </h1>
+                <div id="titleBack">
+                    <p>
+                        Welcome to our website, here you can learn about your country’s happiness status, and what factors are most important to generate happiness.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 右侧边栏用来显示用户输入和explaination的 -->
+        <section id="sticky_record">
+            <div id="country">
+                <p>Start typing you countries:</p>
+                <div id="country_form">
+                    <form autocomplete="off" action="/action_page.php">
+                        <div class="autocomplete">
+                        <input id="myInput" type="text" name="myCountry" placeholder="Country">
+                        </div>
+                    </form>
+                    <button id="submit_btn" class="add_delete_btn">+</button>
+                </div>
+                <div id="show_country" class="show_select_field">
+                    <h4>(Please Select Countries)</h4>
+                    <div id="selected_country_list" class="selected_list">
+                    </div>
+                </div>
+            </div>
+
+            <div id="table-side">
+                <p class="table-intro">Don't know what to type? Click on <strong>Top 15 Happiness Country in 2019</strong> Table Below</p>
+                <p></p>
+                <div id="table">
+                </div>
+            </div>
+            <!-- <div id="factors">
+                <p>Start typing your factors</p>
+                <select id="factor_select">
+                    <option value="">Factor</option>
+                    <option value="Economy (GDP per Capita)">Economy (GDP per Capita)</option>
+                    <option value="Family or social support">Family or social support</option>
+                    <option value="Health (Life Expectancy)">Health (Life Expectancy)</option>
+                    <option value="Freedom to make life choices">Freedom to make life choices</option>
+                    <option value="Trust (Government Corruption)">Trust (Government Corruption)</option>
+                    <option value="Generosity">Generosity</option>
+                </select>
+                <div id="show_fact" class="show_select_field">
+                    <h4>(Please Select Factor to Happiness)</h4>
+                    <div id="selected_factor_list" class="selected_list">
+                    </div>
+                </div>
+            </div> -->
+        </section>
+
+        <h4 id="map_trans" class="trans">Where is the happiest country on earth?  What is your country’s happy status? Hover over the country on the <strong>2019 Happiness World Map</strong> below and find out.</h4>
+
+        <!-- happiness map
+        @input: no input
+        @output: world happiness map by country /and or by continent if you have time
+        @handle: 1) hover on map shows data 2)click on map make the country selected -->
+        <section id="map_section">
+            <div id="part1">
+                <div id="world_map">
+                    <div class="tableauPlaceholder" id="viz1608012359975" style="position: relative">
+                        <noscript>
+                          <a href=" ">< img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HappinessScoreMap&#47;Sheet1&#47;1_rss.png' style='border: none' />
+                          </a>
+                        </noscript>
+                        <object class="tableauViz" style="display:none;">
+                        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F">
+                        <param name="embed_code_version" value="3">
+                        <param name="site_root" value="">
+                        <param name="name" value="HappinessScoreMap&#47;Sheet1">
+                        <param name="tabs" value="no">
+                        <param name="toolbar" value="yes">
+                        <param name="static_image" value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ha&#47;HappinessScoreMap&#47;Sheet1&#47;1.png">
+                        <param name="animate_transition" value="yes">
+                        <param name="display_static_image" value="yes">
+                        <param name="display_spinner" value="yes">
+                        <param name="display_overlay" value="yes">
+                        <param name="display_count" value="yes">
+                        <param name="language" value="en">
+                        <param name="filter" value="publish=yes">
+                      </object>
+                      </div>
+                      <script>var divElement = document.getElementById('viz1608012359975');
+var vizElement = divElement.getElementsByTagName('object')[0];
+vizElement.style.width = '1000px';
+vizElement.style.height = "90%";
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+                </div>
+            </div>
+            
+        </section>
+
+        <h4 class="trans">Are you curious about your country’s happiness trend over the years? Is your country’s people feeling happier or unhappier?</h4>
+
+        <!-- The selected coutry's happiness by time
+            @input: country
+            @output: 1) if no input, show global average by time
+            @handle: no handles -->
+        <section>
+            <div class="headerLineChart">
+                <div id="years_visuals">
+                    <div id="years_text"><h2>Happiness Trend</h2><p>Check the happiness trend of your interested countries. <Strong>Moving</Strong> your mouse over the chart or <strong>Hovering</strong> on points to see countries' Happiness Info over years.</p></div>
+                    <div id="years_chart"></div>
+                </div>
+            </div>
+        </section>
+
+        <h4 class="trans">Do you think the policy makers should be making the happiness of their people the goal of their policies?  What variables would need to be considered in order to make people happier? What are the key components of well-being?</h4>
+        <h5>Click on the country legend or graph to see more information</h5>
+        <!-- The spider chart or donut chart of selected country for different factors contributes to happiness
+            @input: selected countries
+            @output: 1) if no input, show global average donut chart
+            @handle: handles click on factors make the factor selected -->
+        <section id="spider_chart_section">
+            <div id="factors_spider_chart">
+            </div>
+            <div id="factor_graph">
+            </div>
+        </section>
+
+
+        <!-- The line chart
+            @input: selected factors, selected countries
+            @output: 1) if no input of factors or no input of country/doesn't show graph or show all factors/average by time
+            @handle: no handles-->
+        <!-- <section>
+            <div>
+                How each factors change according to the time
+            </div>
+        </section> -->
+
+        <!-- <div class="footer">
+            <a href="https://courses.cs.washington.edu/courses/cse442/20au/">CSE 442 Data Visualization</a>
+            <a href="http://www.washington.edu">University of Washington</a>
+        </div> -->
+        
+    </body>
+
+</html>
